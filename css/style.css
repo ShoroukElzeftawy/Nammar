@@ -1,0 +1,1266 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: white;
+}
+
+/* Style for the home page section */
+#homePage {
+    padding-left: 2.5%;
+    padding-top: 2.5%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    height: auto;
+    margin-bottom: 10%;
+}
+
+/* Common style for all rows to set them as flex containers */
+#firstRow, #secondRow, #thirdRow, #fourthRow, #hireMe {
+    display: flex;
+    justify-content: space-between; /* Adjusts children spacing */
+    align-items: stretch; /* Ensures that all child elements stretch to match the tallest item */
+    width: 97.5%;
+}
+
+#firstRow div, #secondRow div, #thirdRow div, #fourthRow div {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    margin-bottom: 0.2%;
+    display: flex;
+    align-items: center; /* Centers content vertically */
+    justify-content: left; /* Centers content horizontally */
+}
+
+
+.homeText {
+    border: 2px solid black; /* For visualization */
+    border-radius: 0.9em;
+    margin: 0; /* Ensures no extra margin */
+}
+
+#homePage h1 {
+    line-height: 77.5%;
+    text-align: left;
+    font-size: 16.5em;
+    font-family: "Noto Sans", sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+#homeText1{
+    width: 23%;
+}
+
+#homeText2{
+    width: 38.5%;
+}
+
+#homeText3{
+    width: 45%;
+}
+
+#homeText4{
+    width: 43%;
+}
+
+#fa{
+    margin-left: -5%;
+    margin-top: -3%;
+    margin-bottom: 1%;
+}
+
+#rah{
+    margin-left: -3%;
+    margin-top: -1.5%;
+    margin-bottom: 0.5%;
+}
+
+#nam{
+    margin-left: -2.5%;
+    margin-top: -0.5%;
+    margin-bottom: 0.5%;
+}
+
+#mar{
+    margin-left: -3%;
+    margin-top: -1.5%;
+    margin-bottom: 0%;
+}
+
+#emptySpace1, #emptySpace2, #emptySpace3{
+    flex-grow: 5;
+    border: 2px solid black; /* For visualization */
+    border-radius: 0.9em;
+    margin: 0.2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#emptySpace1{
+    height: 10vh;
+}
+
+#plus {
+    border-radius: 0.9em;
+    border: 2px solid black; /* For visualization */
+    background-color: #eb5bf8;
+    width: 13%;
+    cursor: pointer;
+}
+
+#plus img{
+    width: 80%;
+    margin-left: 11.5%;
+}
+
+
+#hireMe {
+    padding-left: 7%;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    padding-right: 2%;
+    border: 2px solid black; /* For visualization */
+    background-color: #eb5bf8;
+    border-radius: 0.9em;
+}
+
+#hireMe h2 {
+    text-align: center;
+    font-size: 4em;
+    font-family: "Noto Sans", sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin: 0; /* Ensures no extra margin for h2 */
+}
+
+#hireMe a {
+    text-decoration: underline;
+    font-family: "Noto Sans", sans-serif;
+    color: black;
+}
+
+/* Style for the links */
+
+#homePageLinks{
+    padding-top: 0.6%;
+    padding-bottom: 0.6%;
+    border: 2px solid black; /* For visualization */
+    border-radius: 0.9em;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+#homePageLinks ul {
+    list-style-type: none; /* Removes the default list bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+#homePageLinks li {
+    margin-bottom: 10px; /* Adds space between list items, adjust as needed */
+    text-align: left;
+}
+
+.links {
+    padding-bottom: 5%;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: underline; /* Removes the underline from links */
+    font-weight: 200;
+    font-size: 2.3em;
+    color: black; /* Sets the text color, adjust as needed */
+    /* Add more styling here as needed */
+}
+
+#popUp{
+    display: block; /* Start hidden */
+    position: absolute; /* Positioned absolutely for random placement */
+    z-index: 1;
+    opacity: 1;
+    border: none;
+}
+
+#popUpText1, #popUpText2 {
+    display: none; /* Start hidden */
+    cursor: grab;
+    position: fixed; /* Positioned fixedly for full viewport coverage */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width of the viewport */
+    max-height: 200vh; /* Full height of the viewport */
+    z-index: 10;
+    opacity: 0.95;
+    overflow: auto; /* Adds scroll to the content if it exceeds the viewport */
+}
+
+.close {
+    position: absolute;
+    top: 5%; /* Adjusted to be closer to the edge */
+    right: 5%; /* Adjusted to be closer to the edge */
+    width: 10%; /* Adjust if needed */
+    height: auto;
+    cursor: pointer;
+}
+
+/* Other styles remain unchanged */
+
+#popUpText1 p, #popUpText2 ul {
+    padding-top: 20%;
+    align-self: flex-start; /* Aligns text block to the start (left) */
+    text-align: left;
+    padding-left: 5%;
+}
+
+/* Adjusting the styling for list items in popUpText2 */
+#popUpText2 ul li {
+    text-align: left; /* Ensures list items are aligned to the left */
+    margin: 2% 0; /* Adds some space between list items */
+}
+
+#popUpText1{
+    height: auto;
+    width: 60%;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 2%;
+    background-color: #eb5bf8;
+    border: 2px solid black; /* For visualization */
+    border-radius: 0.4em;
+    padding-bottom: 5%;
+}
+
+#popUpText2{
+    height: auto;
+    width: 30%;
+    color: #E9008C;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 2%;
+    background-color: #eb5bf8;
+    border: 2px solid black; /* For visualization */
+    border-radius: 0.4em;
+    padding-bottom: 5%;
+}
+
+#popUpText2 ul{
+    list-style: none;
+    text-decoration: underline;
+}
+
+/* Style for the homePage mobile section */
+#homePageMobile {
+    display: none;
+    padding-left: 2.5%;
+    padding-top: 2.5%;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    height: auto;
+}
+
+/* Common style for all rows to set them as flex containers */
+
+#secondRowM, #thirdRowM, #fourthRowM, #hireMeM {
+    display: flex;
+    justify-content: space-between; /* Adjusts children spacing */
+    align-items: stretch; /* Ensures that all child elements stretch to match the tallest item */
+    width: 97.5%;
+}
+
+#secondRowM div, #homeText3M, #fourthRowM div {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center; /* Centers content vertically */
+    justify-content: left; /* Centers content horizontally */
+}
+
+.homeTextM {
+    border: 3px solid black; /* For visualization */
+    border-radius: 0.9em;
+    margin: 0; /* Ensures no extra margin */
+    padding-right: 1%;
+}
+
+#secondRowM{
+    margin-top: 20%;
+}
+
+#homePageMobile h1 {
+    line-height: 0.8;
+    text-align: left;
+    font-size: 6em;
+    font-family: "Noto Sans", sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+#fourthRowM {
+    display: flex;
+    justify-content: flex-end; /* Aligns children to the right */
+    align-items: center; /* Keeps the vertical alignment as is */
+    margin-bottom: 0.2%;
+}
+
+
+#hireMeM {
+    padding-left: 3%;
+    padding-top: 3.5%;
+    padding-bottom: 2.5%;
+    padding-right: 1%;
+}
+
+#hireMeM h2 {
+    line-height: 1.3;
+    text-align: left;
+    font-size: 0.8em;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 100;
+    margin: 0; /* Ensures no extra margin for h2 */
+}
+/* end of homePage mobile section*/
+
+#menu{
+    display: none;
+}
+
+#menuToggle {
+    display: none;
+    position: fixed;
+    top: 3%;
+    right: 6%;
+    padding-top: 0.3em; /* Removes the default button padding */
+    padding-bottom: 0.1em; /* Removes the default button padding */
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+    cursor: pointer; /* Changes the cursor to indicate it's clickable */
+    z-index: 2;
+    background-color: white;
+    border-radius: 0.2em;
+}
+
+#menuToggle img {
+    width: 3em; /* Adjust based on your image size */
+    height: auto; /* Keeps the aspect ratio of the image */
+    box-shadow: 0px 8px 10px -5px rgba(0, 0, 0, 0.2);
+    opacity: 1;
+}
+
+#sideMenu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0em; /* Start off-screen */
+    width: 100%; /* Or your desired width */
+    height: 100%;
+    background-color: #cececeeb; /* Or any color */
+    z-index: 10;
+}
+
+#mobileNavLinks{
+    margin-top: 1%;
+    list-style-type: none;
+    font-family: "Noto Sans", sans-serif;
+    padding: 0;
+}
+
+#mobileNavLinks p{
+    line-height: 1;
+    padding: 1.2em 0.1em;
+    text-decoration: none;
+    color: #eb5bf8;
+    font-size: 3.6em;
+    transition: color 0.3s;
+    text-align: left;
+    margin-bottom: 1.3em;
+}
+
+/* Close button styling */
+#closeMenu {
+    position: absolute;
+    top: 5%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    border: none;
+    cursor: pointer
+}
+
+#closeMenu img {
+    width: 4em; /* Adjust based on your image size */
+    height: auto; /* Keeps the aspect ratio of the image */
+}
+
+/* end of homePage mobile styling */
+
+/* start of aboutPage mobile styling */
+
+#aboutPageMobile {
+    display: none;
+    padding-left: 5%;
+    padding-top: 10%;
+    width: 95%;
+    text-align: center;
+    height: auto;
+    margin-bottom: 10%;
+}
+
+#aboutPageMobile p {
+    line-height: 1.6;
+    text-align: left;
+    font-size: 1.2em;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 100;
+}
+
+#aboutPageMobile a {
+    border: 1px solid #9D1BB2;
+    padding-left: 1%;
+    padding-right: 1%;
+    border-radius: 0.5em;
+}
+
+/* start of projectssPage section */
+#projectsPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    width: 100%; /* Adjust based on layout */
+    margin: 0 auto; /* Center the services page */
+    padding-bottom: 1%;
+}
+
+#projectsList {
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: auto;
+}
+
+.project {
+    padding: 0.6em 0em;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    width: 95%; /* Full width to contain the a, img, and p */
+    margin-bottom: 2%;
+    transition: all 0.3s ease; /* Smooth transition for expanding height */
+    border: 2px solid black;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 1em;
+    margin-left: 2.5%;
+}
+
+.projects-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    cursor: pointer;
+}
+
+.projectTitle {
+    width: 100%;
+    padding: 1%;
+    font-family: "Noto Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Ensures the title items are stacked and aligned to the left */
+}
+
+.projectTitle h1,
+.projectTitle h3,
+.projectTitle h4 {
+    padding-left: 5%;
+    margin: 0 0; /* Adds some space between title elements */
+    text-align: left;
+}
+
+.projectTitle h1 {
+    width: 90%;
+    font-size: 2em;
+    font-weight: 700;
+    color: black; 
+    padding-bottom: 1%;
+}
+
+.projectTitle h3 {
+    font-size: 2em;
+    font-weight: 100;
+    color: black; 
+}
+
+.projectTitle h4 {
+    width: 110%;
+    font-size: 2em;
+    font-weight: 100;
+    color: black; 
+}
+
+.projectShow{
+    overflow: hidden;
+    order: 3;
+    padding-top: 0%;
+    margin-bottom: 3%;
+}
+
+.plusImg {
+    width: 8%; /* Adjust the size of the plus image */
+    cursor: pointer; /* Ensures the cursor changes to pointer when hovering over the image */
+    margin-right: 5%;
+    align-self: center;
+    transition: transform 0.3s ease-in-out;;
+}
+
+.project > a {
+    display: block;
+    flex-grow: 1; /* Allow the link to fill the container, pushing the image to the right */
+    display: flex;
+    justify-content: space-between; /* Separate text and plus image */
+    align-items: center; /* Center items vertically within the 'a' tag */
+}
+
+/* start of project 1 */
+#pants {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Ensures content aligns to the start, affecting the vertical alignment of flex items */
+    width: 100%;
+    margin-top: 2em; /* Adjust as needed */
+}
+
+
+#pants img {
+    width: 100%;
+}
+
+#pantsText {
+    padding-top: 4%;  
+    width: 90%;  
+    margin: auto;
+    text-align: left;
+    max-height:130vh ;
+}
+
+#pantsText p {
+    font-size: 2em; /* Adjust based on your design */
+    line-height: 1.6;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 100;
+    margin-bottom: 5%; /* Provides spacing at the bottom */
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid-column;
+    column-count: 2; 
+}
+
+#pantsText a {
+    padding: 0.1em;
+    font-size: 1em; /* Adjust based on your design */
+    line-height: 1.6;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 100;
+    border-bottom: 2px solid black;
+}
+
+
+#pants2, #pants3, #pants4, #pants5 {
+    justify-content: space-between; /* Distributes space between the images equally */
+    display: flex;
+    margin-top: 2%; /* Adds space between each div */
+}
+
+#pants4{
+    margin-bottom: 2%;
+
+}
+
+#pants2 img, #pants3 img, #pants4 img, #pants5 img{
+    width: 49%; /* Each image takes up roughly half of the container width */
+    height: auto; /* Maintains the aspect ratio of the images */
+}
+
+/* #pants2 img:nth-child(1), #pants3 img:nth-child(1), #pants4 img:nth-child(1), #pants5 img:nth-child(1){
+    margin-right: auto;
+}
+
+#pants2 img:nth-child(2), #pants3 img:nth-child(2), #pants4 img:nth-child(2), #pants5 img:nth-child(2){
+    margin-left: auto;
+} */
+/* end of project 1 */
+
+/* start of project 2 */
+#network {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Ensures content aligns to the start, affecting the vertical alignment of flex items */
+    width: 100%;
+    margin-top: 2%;
+}
+
+#network  img {
+    width: 100%;
+    margin-bottom: 2%;
+}
+
+#networkText {
+    padding-top: 2%;
+    column-gap: 45px;  
+    width: 90%;  
+    margin: auto;
+    text-align: left;
+    max-height:100vh ;
+}
+
+#networkText p {
+    font-size: 2em; /* Adjust based on your design */
+    line-height: 1.6;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 100;
+    margin-bottom: 5%; /* Provides spacing at the bottom */
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid-column;
+    column-count: 2; 
+}
+
+#networkText a {
+    padding: 0.1em;
+    font-size: 1em; /* Adjust based on your design */
+    line-height: 1.6;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 100;
+    border-bottom: 2px solid black;
+}
+/* end of project 2 */
+
+/* start of project 3 */
+#shufa {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Ensures content aligns to the start, affecting the vertical alignment of flex items */
+    width: 100%;
+    margin-top: 2%;
+}
+
+#shufa  img {
+    width: 100%;
+    margin-bottom: 2%;
+}
+#shufa video {
+    width: 100%;
+    margin-bottom: 2%;
+}
+
+#shufaText {
+    padding-top: 2%; 
+    width: 90%;  
+    margin: auto;
+    text-align: left;
+    max-height:115vh; 
+    padding-bottom: 2%;
+}
+
+#shufaText p {
+    font-size: 2em; /* Adjust based on your design */
+    line-height: 1.6;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 100;
+    margin-bottom: 20px; /* Provides spacing at the bottom */
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid-column;
+    column-count: 2; 
+}
+
+#shufaText a {
+    text-decoration: none;
+    padding: 0.1em;
+    font-size: 1em; /* Adjust based on your design */
+    line-height: 1.6;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 100;
+    border-bottom: 2px solid black;
+}
+/* end of project 3 */
+
+/* start of project 4 */
+#ai-generated {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Ensures content aligns to the start, affecting the vertical alignment of flex items */
+    width: 100%;
+    margin-top: 2em; /* Adjust as needed */
+}
+
+#ai-generated > div {
+    display: flex;
+    margin-bottom: 2%; /* Adds space between each div */
+}
+
+/* Corrected selectors for divs that have two images */
+#ai-generated2, #ai-generated4 {
+    justify-content: space-between; /* Distributes space between the images equally */
+}
+
+#ai-generated2 img, #ai-generated4 img {
+    width: 49%; /* Each image takes up roughly half of the container width */
+    height: auto; /* Maintains the aspect ratio of the images */
+}
+
+/* Adjusts single images to take full width of their container */
+#ai-generated1 img, #ai-generated3 img {
+    width: 100%; /* Ensures the image takes the full width of its container */
+}
+/* end of project 4 */
+
+/* start of project 5 */
+#zine {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Ensures content aligns to the start, affecting the vertical alignment of flex items */
+    width: 100%;
+    margin-top: 2%;
+}
+
+#zine  img {
+    width: 100%;
+    margin-bottom: 2%;
+}
+
+#zineText {
+    padding-top: 2%;
+    width: 90%;  
+    margin: auto;
+    text-align: left;
+    max-height:40vh ;
+}
+
+#zineText p {
+    font-size: 2em; /* Adjust based on your design */
+    line-height: 1.6;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 100;
+    margin-bottom: 20px; /* Provides spacing at the bottom */
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid-column;
+    column-count: 2; 
+}
+
+#zineText a {
+    padding: 0.1em;
+    font-size: 1em; /* Adjust based on your design */
+    line-height: 1.6;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 100;
+    border-bottom: 2px solid black;
+}
+/* end of project 5 */
+
+/* start of project 6 */
+#project6{
+    background-color: white;
+}
+
+#visual{
+    width: 88.5%; /* Ensures the container takes the full width */
+    margin-left: 5.5%;
+    margin-right: 8%;
+}
+#visual1 {
+    display: flex; /* Enables Flexbox layout */
+    justify-content: space-evenly; /* More uniform distribution of space */ 
+}
+
+#visual1 > div {
+    flex: 1; /* Gives each column an equal amount of space */
+    display: flex; /* Enables Flexbox layout within each column */
+    justify-content: center; /* Centers the image within each column */
+    align-items: center; /* Vertically centers the image within each column */
+}
+
+#visual1 .left-column img, 
+#visual1 .middle-column img, 
+#visual1 .right-column img {
+    max-width: 100%; /* Ensures the image does not exceed its column's width */
+    height: 90%; /* Maintains the image's aspect ratio */
+}
+
+#visual1 .left-column img {
+    margin-right:auto;
+}
+
+#visual1 .right-column img {
+    margin-left:auto;
+    margin-left: 15%;
+}
+
+
+#visual2 {
+    display: flex; /* Enables Flexbox layout */
+    justify-content: space-between; /* More uniform distribution of space */ 
+}
+
+#visual2 > div {
+    flex: 1; /* Gives each column an equal amount of space */
+    display: flex; /* Enables Flexbox layout within each column */
+}
+
+#visual2 .left-column img, 
+#visual2 .middle-column img, 
+#visual2 .right-column img {
+    max-width: 100%; /* Ensures the image does not exceed its column's width */
+    height: 90%; /* Maintains the image's aspect ratio */
+}
+
+#visual2 .left-column {
+    margin-right:auto;
+}
+
+#visual2 .right-column{
+    margin-left:auto;
+}
+
+#visual2 p{
+    padding-left: 10%;
+    font-size: 1.5em; /* Adjust based on your design */
+    line-height: 1.5;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 100;
+}
+
+#visual a {
+    padding: 0.1em;
+    font-size: 1em; /* Adjust based on your design */
+    line-height: 1.6;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 100;
+    border-bottom: 2px solid black;
+}
+
+/* end of project 6 */
+
+/* start of project 7 */
+#whiteHouse {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Ensures content aligns to the start, affecting the vertical alignment of flex items */
+    width: 100%;
+    margin-top: 2%;
+}
+
+#whiteHouse img {
+    width: 100%;
+    margin-bottom: 2%;
+}
+
+#whiteHouse video {
+    width: 100%;
+    margin-bottom: 2%;
+}
+
+#whiteHouseText {
+    padding-top: 2%; 
+    width: 90%;  
+    margin: auto;
+    text-align: left;
+    max-height:70vh ;
+}
+
+#whiteHouseText p {
+    font-size: 2em; /* Adjust based on your design */
+    line-height: 1.6;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 100;
+    margin-bottom: 20px; /* Provides spacing at the bottom */
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid-column;
+    column-count: 2; 
+}
+
+#whiteHouseText a {
+    padding: 0.1em;
+    font-size: 1em; /* Adjust based on your design */
+    line-height: 1.6;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 100;
+    border-bottom: 2px solid black;
+}
+/* end of project 5 */
+
+/* start of project 8 */
+#talatKhotut {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Ensures content aligns to the start, affecting the vertical alignment of flex items */
+    width: 100%;
+    margin-top: 2%;
+}
+
+#talatKhotut  img {
+    width: 100%;
+}
+
+#talatKhotutText {
+    width: 90%;  
+    margin: auto;
+    text-align: left;
+    max-height:80vh ;
+}
+
+#talatKhotutText p {
+    font-size: 2em; /* Adjust based on your design */
+    line-height: 1.6;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 100;
+    margin-bottom: 20px; /* Provides spacing at the bottom */
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid-column;
+    column-count: 2; 
+}
+
+#talatKhotutText a {
+    padding: 0.1em;
+    font-size: 1em; /* Adjust based on your design */
+    line-height: 1.6;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 100;
+    border-bottom: 2px solid black;
+}
+/* end of project 8 */
+
+/* start of project 9 */
+#doco {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Ensures content aligns to the start, affecting the vertical alignment of flex items */
+    width: 100%;
+    margin-top: 2%;
+}
+
+#doco > div {
+    display: flex;
+    margin-bottom: 2%; /* Adds space between each div */
+    width: 100%; /* Full width */
+}
+
+/* For doco1 and doco2 where images are next to each other */
+#doco1, #doco2 {
+    justify-content: space-between;
+}
+
+#doco1 img:nth-child(1), #doco2 img:nth-child(2){
+    width: 29%;
+}
+
+#doco1 img:nth-child(2), #doco2 img:nth-child(1){
+    width: 69%;
+}
+
+/* For doco3 with the first image on the left, and the next two on the right */
+#doco3 {
+    display: flex;
+}
+
+#doco3 .left-column, #doco3 .right-column {
+    display: flex;
+    flex-direction: column;
+}
+
+#doco3 .left-column {
+    width: 69%;
+}
+
+#doco3 .left-column img {
+    width: 100%; /* Ensures the image fills the entire left column */
+    height: auto; /* Maintains the aspect ratio */
+}
+
+#doco3 .right-column {
+    width: 29%;
+    display: flex;
+    flex-direction: column; /* Stacks the images vertically */
+    margin-left: auto;
+    gap: 5%;
+}
+
+#doco3 .right-column img {
+    width: 112%; /* Each image in the right column takes the full width */
+    height: auto; /* Adjusts the height to maintain aspect ratio */
+}
+
+
+/* For doco4 with the first and second images on top of each other, and the third on the right */
+#doco4 {
+    display: flex;
+}
+
+#doco4 .left-column, #doco4 .right-column {
+    display: flex;
+    flex-direction: column;
+}
+
+#doco4 .left-column {
+    width: 29%;
+    display: flex;
+    flex-direction: column; /* Stacks the images vertically */
+    margin-right: auto;
+    gap: 5%;
+}
+
+#doco4 .left-column img {
+    width: 100%; /* Ensures the image fills the entire left column */
+    height: auto; /* Maintains the aspect ratio */
+}
+
+#doco4 .right-column {
+    width: 69%;
+}
+
+#doco4 .right-column img {
+    width: 100%; /* Each image in the right column takes the full width */
+    height: 90%; /* Adjusts the height to maintain aspect ratio */
+}
+/* end of project 9 */
+
+/* start of project 10 */
+#analog {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Ensures content aligns to the start, affecting the vertical alignment of flex items */
+    width: 100%;
+    margin-top: 2em; /* Adjust as needed */
+}
+
+#analog > div {
+    display: flex;
+    margin-bottom: 2%; /* Adds space between each div */
+}
+
+/* Corrected selectors for divs that have two images */
+#analog2, #analog4 {
+    justify-content: space-between; /* Distributes space between the images equally */
+    display: flex;
+}
+
+#analog2 > img:first-child, #analog4 > img:last-child {
+    width: 69%; /* First image takes up 30% of the container width */
+    height: auto; /* Maintains the aspect ratio */
+}
+
+#analog2 > img:last-child, #analog4 > img:first-child {
+    width: 29%; /* Second image takes up 70% of the container width */
+    height: auto; /* Maintains the aspect ratio */
+}
+
+/* Adjusts single images to take full width of their container */
+#analog1 img, #analog3 img {
+    width: 100%; /* Ensures the image takes the full width of its container */
+}
+/* end of project 10 */
+/* end of servicesPage section */
+
+/* start of footer section */
+#footer {
+    margin-top: 0;
+    margin-left: 2.5%;
+    width: 95%;
+    padding: 1em 0;
+    background-color: #eb5bf8;
+    color: white;
+    border: 2px solid black; /* For visualization */
+    border-radius: 1em;
+    margin-bottom: 3%;
+}
+
+#footer p {
+    padding-left: 5%;
+    text-align: left;
+    font-size: 1.5em;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 100;
+    color: black;
+}
+/* end of the footer section */
+
+/* start of footer mobile section */
+#footerMobile {
+    display: none;
+    margin-left: 2.5%;
+    margin-top: 1%;
+    width: 95%;
+    text-align: left;
+    height: auto;
+    margin-bottom: 3%;
+    border: 2px solid black; /* For visualization */
+    border-radius: 1em;
+    padding: 5%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+#footerMobile li{
+    list-style: none;
+    margin-bottom: 0.5em;
+    text-align: left;
+}
+
+#footerMobile a{
+    text-decoration: underline;
+    font-family: "Noto Sans", sans-serif;
+    color: #eb5bf8;
+    font-size: 2em;
+    transition: color 0.3s;
+    text-align: center;
+    margin-bottom: 1em;
+    font-weight: 200;
+}
+/* end of footer mobile section */
+
+/* start of mobile styling */
+@media (max-width: 600px) {
+    #homePage {
+        display: none;
+    }
+
+    #homePageMobile{
+        display: block;
+    }
+
+    #menu {
+        display: block;
+    }
+
+    #menuToggle {
+        display: block;
+    }
+
+    #sideMenu {
+        display: none;
+    }
+
+    #aboutPageMobile {
+        display: block;
+    }
+
+    .projectTitle h1 {
+        width: 90%;
+        font-size: 1em;
+        font-weight: 700;
+        color: black; 
+        padding-bottom: 1%;
+    }
+
+    .projectTitle h3 {
+        font-size: 0.8em;
+        font-weight: 100;
+        color: black; 
+    }
+
+    .projectTitle h4 {
+        font-size: 0.8em;
+        font-weight: 100;
+        color: black; 
+    }
+
+    #pantsText p, #networkText p, #project3 p, #project4 p, #zineText p, #whiteHouseText p, #talatKhotutText p, #project9 p, #project10 p {
+        font-size: 1em;
+        column-count: 1;
+    }
+
+    #project6 p {
+        font-size: 0.5em;
+    }
+
+    #pantsText a, #networkText a, #project3 a, #project4 a, #zineText a, #whiteHouseText a, #talatKhotutText a, #project9 a, #project10 a {
+        border-bottom: 1px solid black;
+    }
+
+    #footerMobile {
+        display: block;
+    }
+
+    #footer p {
+        font-size: 0.8em;
+    }
+
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) {
+    #homePage h1{
+        font-size: 9.5em;
+    }
+
+    #hireMe h2 {
+        font-size: 2.5em;
+    }
+
+    #homePageLinks{
+        font-size: 0.6em;
+    }
+
+    #emptySpace1{
+        height: 5vh;
+    }
+
+    .projectTitle h1 {
+        font-size: 1.5em;
+    }
+    
+    .projectTitle h3 {
+        font-size: 1.5em;
+    }
+    
+    .projectTitle h4 {
+        font-size: 1.5em;
+    }
+
+    #pantsText p, #networkText p, #project3 p, #project4 p, #zineText p, #whiteHouseText p, #talatKhotutText p, #project9 p, #project10 p {
+        font-size: 1.3em;
+    }
+
+    #project6 p {
+        font-size: 0.5em;
+    }
+
+    #pantsText a, #networkText a, #project3 a, #project4 a, #zineText a, #whiteHouseText a, #talatKhotutText a, #project9 a, #project10 a {
+        border-bottom: 1px solid black;
+    }
+}
+
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1360px) {
+    #homePage h1{
+        font-size: 12em;
+    }
+
+    #hireMe h2 {
+        font-size: 3em;
+    }
+
+    #homePageLinks{
+        font-size: 0.8em;
+    }
+
+    #emptySpace1{
+        height: 5vh;
+    }
+}
+
