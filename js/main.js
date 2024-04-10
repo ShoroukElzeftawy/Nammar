@@ -105,6 +105,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // start of projectsPage 
     // Initially hide all .projectShow elements
+    projectShows.forEach(function(projectShow) {
+        projectShow.style.display = 'none';
+    });
     projects.forEach(project => {
         project.addEventListener('click', function() {
             const projectShow = this.querySelector('.projectShow');
