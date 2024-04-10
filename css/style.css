@@ -230,6 +230,7 @@ html {
     width: 60%;
     font-family: "Noto Sans", sans-serif;
     font-size: 2em;
+    font-weight: 200;
     text-align: center;
     margin-bottom: 2%;
     background-color: #eb5bf8;
@@ -313,6 +314,7 @@ html {
 
 
 #hireMeM {
+    width: 100%;
     padding-left: 3%;
     padding-top: 5%;
     padding-bottom: 2.5%;
@@ -322,7 +324,7 @@ html {
 #hireMeM h2 {
     line-height: 1.3;
     text-align: left;
-    font-size: 0.8em;
+    font-size: 0.7em;
     font-family: "Noto Sans", sans-serif;
     font-weight: 100;
     margin: 0; /* Ensures no extra margin for h2 */
@@ -374,11 +376,11 @@ html {
 }
 
 #mobileNavLinks p{
-    line-height: 1;
+    line-height: 0.8;
     padding: 1.2em 0.1em;
     text-decoration: none;
     color: #eb5bf8;
-    font-size: 3.6em;
+    font-size: 3.3em;
     transition: color 0.3s;
     text-align: left;
     margin-bottom: 1.3em;
@@ -542,7 +544,7 @@ html {
     flex-direction: column;
     align-items: flex-start; /* Ensures content aligns to the start, affecting the vertical alignment of flex items */
     width: 100%;
-    margin-top: 0.5em; /* Adjust as needed */
+    margin-top: 3%; /* Adjust as needed */
 }
 
 
@@ -611,7 +613,7 @@ html {
     flex-direction: column;
     align-items: flex-start; /* Ensures content aligns to the start, affecting the vertical alignment of flex items */
     width: 100%;
-    margin-top: 2%;
+    margin-top: 3%;
 }
 
 #network  img {
@@ -656,7 +658,7 @@ html {
     flex-direction: column;
     align-items: flex-start; /* Ensures content aligns to the start, affecting the vertical alignment of flex items */
     width: 100%;
-    margin-top: 2%;
+    margin-top: 3%;
 }
 
 #shufa  img {
@@ -706,7 +708,7 @@ html {
     flex-direction: column;
     align-items: flex-start; /* Ensures content aligns to the start, affecting the vertical alignment of flex items */
     width: 100%;
-    margin-top: 0.5em; /* Adjust as needed */
+    margin-top: 3%; /* Adjust as needed */
 }
 
 #ai-generated > div {
@@ -736,7 +738,7 @@ html {
     flex-direction: column;
     align-items: flex-start; /* Ensures content aligns to the start, affecting the vertical alignment of flex items */
     width: 100%;
-    margin-top: 2%;
+    margin-top: 3%;
 }
 
 #zine  img {
@@ -839,29 +841,37 @@ html {
     width: 100%;  
     margin: auto;
     text-align: left;
-    max-height:20vh ;
+    height: 30vh;
 }
 
 #visualText p {
-    font-size: 2em; /* Adjust based on your design */
+    column-count: 2;
+    height: auto;
+    font-size: 2em;
     line-height: 1.6;
     font-family: "Noto Sans", sans-serif;
     font-weight: 100;
-    margin-bottom: 20px; /* Provides spacing at the bottom */
+    margin-bottom: 20px;
     -webkit-column-break-inside: avoid;
     page-break-inside: avoid;
     break-inside: avoid-column;
-    column-count: 2; 
 }
 
 #visualText a {
     padding: 0.1em;
-    font-size: 1em; /* Adjust based on your design */
+    font-size: 1em;
     line-height: 1.6;
     font-family: "Noto Sans", sans-serif;
     font-weight: 100;
     border-bottom: 2px solid black;
 }
+
+/* Additional CSS to force content to start at the top of the second column */
+.new-column {
+    break-before: column; /* Forces the content to break into a new column */
+    display: block; /* Ensures the span behaves like a block element */
+}
+
 
 /* end of project 6 */
 
@@ -871,7 +881,7 @@ html {
     flex-direction: column;
     align-items: flex-start; /* Ensures content aligns to the start, affecting the vertical alignment of flex items */
     width: 100%;
-    margin-top: 2%;
+    margin-top: 3%;
 }
 
 #whiteHouse img {
@@ -920,7 +930,7 @@ html {
     flex-direction: column;
     align-items: flex-start; /* Ensures content aligns to the start, affecting the vertical alignment of flex items */
     width: 100%;
-    margin-top: 2%;
+    margin-top: 3%;
 }
 
 #talatKhotut  img {
@@ -962,7 +972,7 @@ html {
     flex-direction: column;
     align-items: flex-start; /* Ensures content aligns to the start, affecting the vertical alignment of flex items */
     width: 100%;
-    margin-top: 2%;
+    margin-top: 3%;
 }
 
 #doco > div {
@@ -1056,7 +1066,7 @@ html {
     flex-direction: column;
     align-items: flex-start; /* Ensures content aligns to the start, affecting the vertical alignment of flex items */
     width: 100%;
-    margin-top: 0.5em; /* Adjust as needed */
+    margin-top: 3%; /* Adjust as needed */
 }
 
 #analog > div {
@@ -1197,6 +1207,7 @@ html {
 
     #pantsText p, #networkText p, #shufaText p, #zineText p, #visualText p, #whiteHouseText p, #talatKhotutText p{
         font-size: 1em;
+        columns: 1;
     }
 
     #pantsText a, #networkText a, #shufaText a, #zineText a, #visualText a, #whiteHouseText a, #talatKhotutText a{
@@ -1246,6 +1257,7 @@ html {
 
     #pantsText p, #networkText p, #shufaText p, #zineText p, #visualText p, #whiteHouseText p, #talatKhotutText p{
         font-size: 1.3em;
+        columns: 1;
     }
 
     #pantsText a, #networkText a, #shufaText a, #zineText a, #visualText a, #whiteHouseText a, #talatKhotutText a{
