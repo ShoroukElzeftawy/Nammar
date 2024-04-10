@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const projects = document.querySelectorAll('.project');
     const projectShows = document.querySelectorAll('.projectShow');
     const project6 = document.getElementById('project6');
-    const project6Header = project6.querySelector('.header-title');
 
     plusDiv.addEventListener('click', function () {
         showRandomly(popUpText1);
@@ -82,13 +81,16 @@ document.addEventListener('DOMContentLoaded', function () {
         // Checks the current display style of the sideMenu to decide action
         if (sideMenu.style.display === 'block') {
             sideMenu.style.display = 'none';
+            document.body.classList.remove('no-scroll'); // Enable scrolling when menu is closed
         } else {
             sideMenu.style.display = 'block';
+            document.body.classList.add('no-scroll'); // Disable scrolling when menu is open
         }
     }
     // Function to close the side menu
     function closeSideMenu() {
         sideMenu.style.display = 'none';
+        document.body.classList.remove('no-scroll');
     }
     // Attach event listener to the menu toggle button
     menuToggle.addEventListener('click', toggleSideMenu);
@@ -103,31 +105,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // start of projectsPage 
     // Initially hide all .projectShow elements
-    projectShows.forEach(function(projectShow) {
-        projectShow.style.display = 'none';
-    });
-
-    projects.forEach(project => {
-        project.addEventListener('click', function() {
-            // Check if the project already has the specified background color applied
-            if (this.style.backgroundColor === 'rgb(235, 91, 248)') { // This is the RGB equivalent of #eb5bf8
-                // If it does, reset to default (or whatever your default background color is)
-                this.style.backgroundColor = ''; // Change '' to your default background color if needed
-                project6.style.backgroundColor = 'white';
-            } else {
-                
-            }
-        });
-    });
-
     projects.forEach(project => {
         project.addEventListener('click', function() {
             const projectShow = this.querySelector('.projectShow');
             const img = this.querySelector('img.plusImg');
-
+    
             // Determine if the clicked projectShow is already open
             const isCurrentlyVisible = projectShow.style.display === 'block';
-
+    
             // Hide all projectShow divs
             projectShows.forEach(el => {
                 el.style.display = 'none';
@@ -135,11 +120,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 const closeImg = el.parentElement.querySelector('img.plusImg');
                 if (closeImg) closeImg.style.transform = 'rotate(0deg)';
             });
-
+    
             // Toggle the clicked projectShow based on its previous state
             if (!isCurrentlyVisible) {
                 projectShow.style.display = 'block';
                 img.style.transform = 'rotate(45deg)';
+                // Scroll the clicked project into view
+                this.scrollIntoView({behavior: 'smooth', block: 'start'});
             } else {
                 projectShow.style.display = 'none';
                 img.style.transform = 'rotate(0deg)';
