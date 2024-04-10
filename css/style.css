@@ -314,7 +314,7 @@ html {
 
 #hireMeM {
     padding-left: 3%;
-    padding-top: 3.5%;
+    padding-top: 5%;
     padding-bottom: 2.5%;
     padding-right: 1%;
 }
@@ -399,6 +399,11 @@ html {
     height: auto; /* Keeps the aspect ratio of the image */
 }
 
+.no-scroll {
+    overflow: hidden;
+    height: 100%;
+}
+
 /* end of homePage mobile styling */
 
 /* start of aboutPage mobile styling */
@@ -422,10 +427,9 @@ html {
 }
 
 #aboutPageMobile a {
-    border: 1px solid #9D1BB2;
+    border-bottom: 1px solid #9D1BB2;
     padding-left: 1%;
     padding-right: 1%;
-    border-radius: 0.5em;
 }
 
 /* start of projectssPage section */
@@ -538,7 +542,7 @@ html {
     flex-direction: column;
     align-items: flex-start; /* Ensures content aligns to the start, affecting the vertical alignment of flex items */
     width: 100%;
-    margin-top: 2em; /* Adjust as needed */
+    margin-top: 0.5em; /* Adjust as needed */
 }
 
 
@@ -621,7 +625,7 @@ html {
     width: 90%;  
     margin: auto;
     text-align: left;
-    max-height:100vh ;
+    max-height:120vh ;
 }
 
 #networkText p {
@@ -670,7 +674,7 @@ html {
     margin: auto;
     text-align: left;
     max-height:115vh; 
-    padding-bottom: 2%;
+    padding-bottom: 5%;
 }
 
 #shufaText p {
@@ -702,7 +706,7 @@ html {
     flex-direction: column;
     align-items: flex-start; /* Ensures content aligns to the start, affecting the vertical alignment of flex items */
     width: 100%;
-    margin-top: 2em; /* Adjust as needed */
+    margin-top: 0.5em; /* Adjust as needed */
 }
 
 #ai-generated > div {
@@ -771,10 +775,6 @@ html {
 /* end of project 5 */
 
 /* start of project 6 */
-#project6{
-    background-color: white;
-}
-
 #visual{
     width: 88.5%; /* Ensures the container takes the full width */
     margin-left: 5.5%;
@@ -823,26 +823,38 @@ html {
 #visual2 .middle-column img, 
 #visual2 .right-column img {
     max-width: 100%; /* Ensures the image does not exceed its column's width */
-    height: 90%; /* Maintains the image's aspect ratio */
+    height: 95%; /* Maintains the image's aspect ratio */
 }
 
-#visual2 .left-column {
+#visual2 .left-column img {
     margin-right:auto;
 }
 
-#visual2 .right-column{
+#visual2 .right-column img {
     margin-left:auto;
 }
 
-#visual2 p{
-    padding-left: 10%;
-    font-size: 1.5em; /* Adjust based on your design */
-    line-height: 1.5;
-    font-family: "Noto Sans", sans-serif;
-    font-weight: 100;
+#visualText {
+    padding-top: 2%;
+    width: 100%;  
+    margin: auto;
+    text-align: left;
+    max-height:20vh ;
 }
 
-#visual a {
+#visualText p {
+    font-size: 2em; /* Adjust based on your design */
+    line-height: 1.6;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 100;
+    margin-bottom: 20px; /* Provides spacing at the bottom */
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid-column;
+    column-count: 2; 
+}
+
+#visualText a {
     padding: 0.1em;
     font-size: 1em; /* Adjust based on your design */
     line-height: 1.6;
@@ -1044,7 +1056,7 @@ html {
     flex-direction: column;
     align-items: flex-start; /* Ensures content aligns to the start, affecting the vertical alignment of flex items */
     width: 100%;
-    margin-top: 2em; /* Adjust as needed */
+    margin-top: 0.5em; /* Adjust as needed */
 }
 
 #analog > div {
@@ -1165,28 +1177,29 @@ html {
         padding-bottom: 1%;
     }
 
+    .plusImg{
+        width:  15%;
+    }
+
     .projectTitle h3 {
-        font-size: 0.8em;
+        width: 50%;
+        font-size: 1em;
         font-weight: 100;
         color: black; 
     }
 
     .projectTitle h4 {
-        font-size: 0.8em;
+        width: 90%;
+        font-size: 1em;
         font-weight: 100;
         color: black; 
     }
 
-    #pantsText p, #networkText p, #project3 p, #project4 p, #zineText p, #whiteHouseText p, #talatKhotutText p, #project9 p, #project10 p {
+    #pantsText p, #networkText p, #shufaText p, #zineText p, #visualText p, #whiteHouseText p, #talatKhotutText p{
         font-size: 1em;
-        column-count: 1;
     }
 
-    #project6 p {
-        font-size: 0.5em;
-    }
-
-    #pantsText a, #networkText a, #project3 a, #project4 a, #zineText a, #whiteHouseText a, #talatKhotutText a, #project9 a, #project10 a {
+    #pantsText a, #networkText a, #shufaText a, #zineText a, #visualText a, #whiteHouseText a, #talatKhotutText a{
         border-bottom: 1px solid black;
     }
 
@@ -1231,15 +1244,11 @@ html {
         font-size: 1.5em;
     }
 
-    #pantsText p, #networkText p, #project3 p, #project4 p, #zineText p, #whiteHouseText p, #talatKhotutText p, #project9 p, #project10 p {
+    #pantsText p, #networkText p, #shufaText p, #zineText p, #visualText p, #whiteHouseText p, #talatKhotutText p{
         font-size: 1.3em;
     }
 
-    #project6 p {
-        font-size: 0.5em;
-    }
-
-    #pantsText a, #networkText a, #project3 a, #project4 a, #zineText a, #whiteHouseText a, #talatKhotutText a, #project9 a, #project10 a {
+    #pantsText a, #networkText a, #shufaText a, #zineText a, #visualText a, #whiteHouseText a, #talatKhotutText a{
         border-bottom: 1px solid black;
     }
 }
