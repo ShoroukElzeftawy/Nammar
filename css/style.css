@@ -55,10 +55,11 @@ body{
     border: 2px solid black; /* For visualization */
     border-radius: 0.9em;
     margin: 0; /* Ensures no extra margin */
+    flex-shrink: 0; /* Prevents shrinking */
 }
 
 #homePage h1 {
-    line-height: 77.5%;
+    line-height: 0.8;
     text-align: left;
     font-size: 16.5em;
     font-family: "Noto Sans", sans-serif;
@@ -67,47 +68,43 @@ body{
 }
 
 #homeText1{
-    max-width: 20.5%;
+    width: 20.5%;
     margin-right: auto;
 }
 
 #homeText2{
-    max-width: 35%;
+    width: 35%;
     margin-left: auto;
 }
 
 #homeText3{
-    max-width: 41%;
+    width: 41%;
     margin-right: auto;
 }
 
 #homeText4{
-    max-width: 39%;
+    width: 39%;
     margin-left: auto;
 }
 
 #fa{
     margin-left: -5%;
-    margin-top: -3%;
-    margin-bottom: 1%;
+    margin-top: -4.5%;
 }
 
 #rah{
     margin-left: -3%;
-    margin-top: -1.5%;
-    margin-bottom: 0.5%;
+    margin-top: -2.5%;
 }
 
 #nam{
     margin-left: -2.5%;
-    margin-top: -0.5%;
-    margin-bottom: 0.5%;
+    margin-top: -3%;
 }
 
 #mar{
     margin-left: -3%;
-    margin-top: -1.5%;
-    margin-bottom: 0%;
+    margin-top: -3%;
 }
 
 #emptySpace1, #emptySpace2, #emptySpace3{
@@ -1301,4 +1298,6 @@ body{
         height: 5vh;
     }
 }
+
+
 
