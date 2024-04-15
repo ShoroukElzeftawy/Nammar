@@ -1311,6 +1311,27 @@ body{
 }
 
 @media screen and (min-width: 1920px) {
+
+    #homeText1{
+        margin-right: auto;
+        width: 15vw;
+    }
+    
+    #homeText2{
+        margin-left: auto;
+        width: 20vw;
+    }
+    
+    #homeText3{
+        margin-right: auto;
+        width: 20vw;
+    }
+    
+    #homeText4{
+        margin-left: auto;
+        width: 20vw;
+    }
+
     #fa{
         margin-left: 1%;
         margin-top: 0;
