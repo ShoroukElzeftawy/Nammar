@@ -1364,6 +1364,10 @@ body{
         font-size: 5em;
     }
 
+    #hireMe{
+        height: 21vh; /* Specify a height or keep it flexible depending on content size */
+    }
+
 }
 
 
