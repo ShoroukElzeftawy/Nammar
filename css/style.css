@@ -10,16 +10,28 @@ html {
     background-color: white;
 }
 
+body{
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    min-height: 100vh;       /* Minimum height of 100% of the viewport */
+    margin: 0;               /* Removes the default margin */
+    padding: 0;              /* Removes the default padding */
+    width: 90%;
+    flex-direction: column;  /* Aligns content vertically if multiple items */
+    background-color: transparent;
+    margin-left: 5%;
+}
+
 /* Style for the home page section */
 #homePage {
-    padding-left: 2.5%;
-    padding-top: 2.5%;
+    margin-top: 5%;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 95vw;
     text-align: center;
     height: auto;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 }
 
 /* Common style for all rows to set them as flex containers */
@@ -27,7 +39,7 @@ html {
     display: flex;
     justify-content: space-between; /* Adjusts children spacing */
     align-items: stretch; /* Ensures that all child elements stretch to match the tallest item */
-    width: 97.5%;
+    width: 100%;
 }
 
 #firstRow div, #secondRow div, #thirdRow div, #fourthRow div {
@@ -440,8 +452,7 @@ html {
     flex-direction: column;
     align-items: center;
     text-align: left;
-    width: 100%; /* Adjust based on layout */
-    margin: 0 auto; /* Center the services page */
+    width: 95vw; /* Adjust based on layout */
     padding-bottom: 1%;
 }
 
@@ -459,13 +470,12 @@ html {
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    width: 95%; /* Full width to contain the a, img, and p */
+    width: 100%; /* Full width to contain the a, img, and p */
     margin-bottom: 2%;
     transition: all 0.3s ease; /* Smooth transition for expanding height */
     border: 2px solid black;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
     border-radius: 1em;
-    margin-left: 2.5%;
 }
 
 .projects-header {
@@ -585,11 +595,11 @@ html {
 #pants2, #pants3, #pants4, #pants5 {
     justify-content: space-between; /* Distributes space between the images equally */
     display: flex;
-    margin-top: 2%; /* Adds space between each div */
+    margin-bottom: 5%; /* Adds space between each div */
 }
 
 #pants4{
-    margin-bottom: 2%;
+    margin-bottom: 5%;
 
 }
 
@@ -1100,8 +1110,7 @@ html {
 /* start of footer section */
 #footer {
     margin-top: 0;
-    margin-left: 2.5%;
-    width: 95%;
+    width: 95vw;
     padding: 1em 0;
     background-color: #eb5bf8;
     color: white;
@@ -1123,9 +1132,8 @@ html {
 /* start of footer mobile section */
 #footerMobile {
     display: none;
-    margin-left: 2.5%;
     margin-top: 1%;
-    width: 95%;
+    width: 95vw;
     text-align: left;
     height: auto;
     margin-bottom: 3%;
@@ -1227,6 +1235,10 @@ html {
 @media only screen 
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) {
+    #homePage{
+        margin-top: 2.5%;
+    }
+
     #homePage h1{
         font-size: 9.5em;
     }
