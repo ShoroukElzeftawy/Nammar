@@ -17,10 +17,9 @@ body{
     min-height: 100vh;       /* Minimum height of 100% of the viewport */
     margin: 0;               /* Removes the default margin */
     padding: 0;              /* Removes the default padding */
-    width: 90%;
+    width: 100vw;
     flex-direction: column;  /* Aligns content vertically if multiple items */
     background-color: transparent;
-    margin-left: 5%;
 }
 
 /* Style for the home page section */
@@ -45,73 +44,85 @@ body{
 #firstRow div, #secondRow div, #thirdRow div, #fourthRow div {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
     margin-bottom: 0.2%;
+    margin-right: 0.2%;
     display: flex;
     align-items: center; /* Centers content vertically */
-    justify-content: left; /* Centers content horizontally */
 }
 
 
 .homeText {
     border: 2px solid black; /* For visualization */
     border-radius: 0.9em;
-    margin: 0; /* Ensures no extra margin */
-    flex-shrink: 0; /* Prevents shrinking */
 }
 
 #homePage h1 {
     line-height: 0.8;
-    text-align: left;
     font-size: 16.5em;
     font-family: "Noto Sans", sans-serif;
     text-transform: uppercase;
     font-weight: 400;
+    margin: 0;
+    padding: 0;
+    height: fit-content;
+}
+
+#homeText1 h1, #homeText3 h1{
+    text-align: left;
+}
+
+#homeText2 h1, #homeText4 h1{
+    text-align: right;
 }
 
 #homeText1{
-    width: 20.5%;
     margin-right: auto;
+    max-width: 20vw;
 }
 
 #homeText2{
-    width: 35%;
     margin-left: auto;
+    max-width: 33.5vw;
 }
 
 #homeText3{
-    width: 41%;
     margin-right: auto;
+    max-width: 39vw;
 }
 
 #homeText4{
-    width: 39%;
     margin-left: auto;
+    max-width: 38vw;
 }
 
 #fa{
-    margin-left: -5%;
-    margin-top: -4.5%;
+    margin-left: -7% !important;
+    margin-top: -5% !important;
+    width: 19vw ;
 }
 
 #rah{
-    margin-left: -3%;
-    margin-top: -2.5%;
+    margin-left: -3.7% !important;
+    margin-top: -3% !important;
+    width: 32.5vw ;
+
 }
 
 #nam{
-    margin-left: -2.5%;
-    margin-top: -3%;
+    margin-left: -3% !important;
+    margin-top: -2.5% !important;
+    width: 38vw ;
 }
 
 #mar{
-    margin-left: -3%;
-    margin-top: -3%;
+    margin-left: -3% !important;
+    margin-top: -2.5% !important;
+    width: 37vw ;
 }
 
 #emptySpace1, #emptySpace2, #emptySpace3{
     flex-grow: 5;
     border: 2px solid black; /* For visualization */
     border-radius: 0.9em;
-    margin: 0.2%;
     display: flex;
     align-items: center;
     justify-content: center;
