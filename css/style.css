@@ -273,10 +273,9 @@ body{
 /* Style for the homePage mobile section */
 #homePageMobile {
     display: none;
-    padding-left: 2.5%;
     padding-top: 2.5%;
     flex-direction: column;
-    width: 100%;
+    width: 90vw;
     text-align: center;
     height: auto;
 }
@@ -374,21 +373,23 @@ body{
     position: fixed;
     top: 0;
     left: 0em; /* Start off-screen */
-    width: 100%; /* Or your desired width */
-    height: 100%;
+    width: 100vw; /* Or your desired width */
+    height: 100vh;
     background-color: #cececeeb; /* Or any color */
     z-index: 10;
 }
 
 #mobileNavLinks{
-    margin-top: 1%;
+    margin-top: 5%;
+    margin-left: 5%;
+    width: 90vw;
     list-style-type: none;
     font-family: "Noto Sans", sans-serif;
     padding: 0;
 }
 
 #mobileNavLinks p{
-    line-height: 0.8;
+    line-height: 1.1;
     padding: 1.2em 0.1em;
     text-decoration: none;
     color: #eb5bf8;
@@ -424,9 +425,8 @@ body{
 
 #aboutPageMobile {
     display: none;
-    padding-left: 5%;
     padding-top: 10%;
-    width: 95%;
+    width: 90vw;
     text-align: center;
     height: auto;
     margin-bottom: 10%;
