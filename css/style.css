@@ -1319,12 +1319,12 @@ body{
     
     #homeText2{
         margin-left: auto;
-        width: 25vw;
+        width: 24vw;
     }
     
     #homeText3{
         margin-right: auto;
-        width: 29vw;
+        width: 28.5vw;
     }
     
     #homeText4{
@@ -1341,14 +1341,14 @@ body{
     #rah{
         margin-left: 0;
         margin-top: 0;
-        width: 25vw ;
+        width: 24vw ;
     
     }
     
     #nam{
         margin-left: 1%;
         margin-top: 0;
-        width: 29vw ;
+        width: 28.5vw ;
     }
     
     #mar{
@@ -1356,6 +1356,18 @@ body{
         margin-top: 0;
         width: 28vw ;
     }
+
+    #hireMe {
+        padding-left: 7%;
+        padding-top: 2.5%;
+        padding-bottom: 2.5%;
+        padding-right: 7%;
+    }
+    
+    #hireMe h2 {
+        font-size: 5em;
+    }
+
 }
 
 
