@@ -156,7 +156,7 @@ body{
     background-color: #eb5bf8; /* Background color */
     border-radius: 0.9em; /* Rounded corners for aesthetics */
     width: 100%; /* Ensures the div takes the full available width */
-    height: 24vh; /* Specify a height or keep it flexible depending on content size */
+    height: 23vh; /* Specify a height or keep it flexible depending on content size */
 }
 
 #hireMe h2 {
