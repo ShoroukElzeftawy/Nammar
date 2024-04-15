@@ -148,29 +148,32 @@ body{
 
 
 #hireMe {
-    padding-left: 7%;
-    padding-top: 2.5%;
-    padding-bottom: 2.5%;
-    padding-right: 2%;
+    display: flex; /* Enables flexbox layout */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    padding: 2.5%; /* Provides padding around the content */
     border: 2px solid black; /* For visualization */
-    background-color: #eb5bf8;
-    border-radius: 0.9em;
+    background-color: #eb5bf8; /* Background color */
+    border-radius: 0.9em; /* Rounded corners for aesthetics */
+    width: 100%; /* Ensures the div takes the full available width */
+    height: 24vh; /* Specify a height or keep it flexible depending on content size */
 }
 
 #hireMe h2 {
-    text-align: center;
-    font-size: 4em;
-    font-family: "Noto Sans", sans-serif;
-    text-transform: uppercase;
-    font-weight: 400;
-    margin: 0; /* Ensures no extra margin for h2 */
+    text-align: center; /* Ensures text is centered within the h2 itself */
+    font-size: 4em; /* Large font size for visibility */
+    font-family: "Noto Sans", sans-serif; /* Specific font family */
+    text-transform: uppercase; /* Uppercase styling for text */
+    font-weight: 400; /* Normal font weight */
+    margin: 0; /* Removes margin to avoid extra space around the h2 */
+    width: 100%; /* Ensures the h2 takes the full width of its container */
 }
 
 #hireMe a {
-    text-decoration: underline;
-    font-family: "Noto Sans", sans-serif;
-    color: black;
+    text-decoration: underline; /* Underlines the link for emphasis */
+    color: black; /* Sets text color */
 }
+
 
 /* Style for the links */
 
@@ -1355,13 +1358,6 @@ body{
         margin-left:0;
         margin-top: 0;
         width: 28vw ;
-    }
-
-    #hireMe {
-        padding-left: 7%;
-        padding-top: 2.5%;
-        padding-bottom: 2.5%;
-        padding-right: 7%;
     }
     
     #hireMe h2 {
