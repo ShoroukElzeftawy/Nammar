@@ -1312,28 +1312,28 @@ body{
 
 @media screen and (min-width: 1920px) {
     #fa{
-        margin-left: 0;
+        margin-left: 1%;
         margin-top: 0;
-        width: 19vw ;
+        width: 15vw ;
     }
     
     #rah{
         margin-left: 0;
         margin-top: 0;
-        width: 32.5vw ;
+        width: 20vw ;
     
     }
     
     #nam{
-        margin-left: 0;
+        margin-left: 1%;
         margin-top: 0;
-        width: 38vw ;
+        width: 20vw ;
     }
     
     #mar{
         margin-left:0;
         margin-top: 0;
-        width: 37vw ;
+        width: 20vw ;
     }
 }
 
