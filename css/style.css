@@ -1314,47 +1314,47 @@ body{
 
     #homeText1{
         margin-right: auto;
-        width: 15vw;
+        width: 14vw;
     }
     
     #homeText2{
         margin-left: auto;
-        width: 30vw;
+        width: 25vw;
     }
     
     #homeText3{
         margin-right: auto;
-        width: 30vw;
+        width: 27vw;
     }
     
     #homeText4{
         margin-left: auto;
-        width: 30vw;
+        width: 27vw;
     }
 
     #fa{
         margin-left: 1%;
         margin-top: 0;
-        width: 15vw ;
+        width: 14vw ;
     }
     
     #rah{
         margin-left: 0;
         margin-top: 0;
-        width: 30vw ;
+        width: 25vw ;
     
     }
     
     #nam{
         margin-left: 1%;
         margin-top: 0;
-        width: 30vw ;
+        width: 27vw ;
     }
     
     #mar{
         margin-left:0;
         margin-top: 0;
-        width: 30vw ;
+        width: 27vw ;
     }
 }
 
