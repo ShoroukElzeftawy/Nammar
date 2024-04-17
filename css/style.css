@@ -77,25 +77,25 @@ body{
 #homeText1{
     margin-right: auto;
     min-width: 20vw;
-    max-width: 21vw;
+    max-width: 26vw;
 }
 
 #homeText2{
     margin-left: auto;
     min-width: 33.5vw;
-    max-width: 35vw;
+    max-width: 40vw;
 }
 
 #homeText3{
     margin-right: auto;
     min-width: 39vw;
-    max-width: 41vw;
+    max-width: 45vw;
 }
 
 #homeText4{
     margin-left: auto;
     min-width: 38vw;
-    max-width: 40vw;
+    max-width: 45vw;
 }
 
 #fa{
