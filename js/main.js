@@ -8,12 +8,26 @@ document.addEventListener('DOMContentLoaded', function () {
     const sideMenu = document.getElementById('sideMenu');
     const projects = document.querySelectorAll('.project');
     const projectShows = document.querySelectorAll('.projectShow');
-    const project6 = document.getElementById('project6');
+    const homeText3 = document.getElementById('homeText3');
+    const hireMe = document.getElementById('hireMe');
 
     plusDiv.addEventListener('click', function () {
         showRandomly(popUpText1);
         showRandomly(popUpText2);
     });
+
+    function adjustHeight() {
+        // Get the computed style of the homeText3 to find its actual height
+        const homeText3Height = window.getComputedStyle(homeText3).height;
+        // Set the height of hireMe to match homeText3
+        hireMe.style.height = homeText3Height;
+    }
+
+    // Adjust height on page load
+    adjustHeight();
+
+    // Re-adjust height whenever the window is resized to ensure consistency
+    window.addEventListener('resize', adjustHeight);
     
     function showRandomly(element) {
         const maxX = window.innerWidth - element.offsetWidth;
