@@ -101,26 +101,30 @@ body{
 #fa{
     margin-left: -7% !important;
     margin-top: -5% !important;
-    width: 19vw ;
+    min-width: 19vw ;
+    max-width: 25vw;
 }
 
 #rah{
     margin-left: -3.7% !important;
     margin-top: -3% !important;
-    width: 32.5vw ;
+    min-width: 32.5vw ;
+    max-width: 40vw;
 
 }
 
 #nam{
     margin-left: -3.5% !important;
     margin-top: -2.5% !important;
-    width: 38vw ;
+    min-width: 38vw ;
+    max-width: 45vw;
 }
 
 #mar{
     margin-left: -3% !important;
     margin-top: -2.5% !important;
-    width: 37vw ;
+    min-width: 37vw ;
+    max-width: 45vw;
 }
 
 #emptySpace1, #emptySpace2, #emptySpace3{
