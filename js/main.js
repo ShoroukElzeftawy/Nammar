@@ -10,11 +10,23 @@ document.addEventListener('DOMContentLoaded', function () {
     const projectShows = document.querySelectorAll('.projectShow');
     const homeText3 = document.getElementById('homeText3');
     const hireMe = document.getElementById('hireMe');
+    const knowMoreLink = document.getElementById('knowMoreLink');
 
-    plusDiv.addEventListener('click', function () {
+    function openInfoPopups() {
         showRandomly(popUpText1);
         showRandomly(popUpText2);
-    });
+    }
+
+    if (plusDiv) {
+        plusDiv.addEventListener('click', openInfoPopups);
+    }
+
+    if (knowMoreLink) {
+        knowMoreLink.addEventListener('click', function (event) {
+            event.preventDefault();
+            openInfoPopups();
+        });
+    }
 
     function adjustHeight() {
         // Get the computed style of the homeText3 to find its actual height
@@ -107,10 +119,14 @@ document.addEventListener('DOMContentLoaded', function () {
         document.body.classList.remove('no-scroll');
     }
     // Attach event listener to the menu toggle button
-    menuToggle.addEventListener('click', toggleSideMenu);
+    if (menuToggle) {
+        menuToggle.addEventListener('click', toggleSideMenu);
+    }
 
     // Attach event listener to the close menu button
-    closeMenu.addEventListener('click', closeSideMenu);
+    if (closeMenu) {
+        closeMenu.addEventListener('click', closeSideMenu);
+    }
 
     // Close side menu when any link within the menu is clicked
     document.querySelectorAll('#mobileNavLinks a').forEach(link => {
@@ -123,12 +139,18 @@ document.addEventListener('DOMContentLoaded', function () {
         projectShow.style.display = 'none';
     });
     projects.forEach(project => {
-        project.addEventListener('click', function() {
-            const projectShow = this.querySelector('.projectShow');
-            const img = this.querySelector('img.plusImg');
+        const projectHeader = project.querySelector('.projects-header');
+        const content = project.querySelector('.projectShow');
+        const img = project.querySelector('img.plusImg');
+
+        if (!projectHeader || !content || !img) {
+            return;
+        }
+
+        projectHeader.addEventListener('click', function() {
     
             // Determine if the clicked projectShow is already open
-            const isCurrentlyVisible = projectShow.style.display === 'block';
+            const isCurrentlyVisible = content.style.display === 'block';
     
             // Hide all projectShow divs
             projectShows.forEach(el => {
@@ -140,12 +162,12 @@ document.addEventListener('DOMContentLoaded', function () {
     
             // Toggle the clicked projectShow based on its previous state
             if (!isCurrentlyVisible) {
-                projectShow.style.display = 'block';
+                content.style.display = 'block';
                 img.style.transform = 'rotate(45deg)';
                 // Scroll the clicked project into view
-                this.scrollIntoView({behavior: 'smooth', block: 'start'});
+                project.scrollIntoView({behavior: 'smooth', block: 'start'});
             } else {
-                projectShow.style.display = 'none';
+                content.style.display = 'none';
                 img.style.transform = 'rotate(0deg)';
             }
         });

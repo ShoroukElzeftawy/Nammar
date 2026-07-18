@@ -87,8 +87,12 @@ body{
 }
 
 #homeText3{
+    flex: 0 0 auto;
     margin-right: auto;
-    max-width: 43vw;
+    width: fit-content;
+    min-width: 0;
+    max-width: none;
+    padding: 0 0.02em 0 0.02em;
 }
 
 #homeText4{
@@ -113,10 +117,13 @@ body{
 }
 
 #nam{
-    margin-left: -3.5% !important;
+    display: block;
+    width: auto;
+    margin-left: 0 !important;
+    margin-right: -0.04em;
     margin-top: -2.5% !important;
-    min-width: 38vw ;
-    max-width: 40vw;
+    min-width: 0;
+    max-width: none;
 }
 
 #mar{
@@ -158,7 +165,7 @@ body{
     display: flex; /* Enables flexbox layout */
     justify-content: center; /* Centers content horizontally */
     align-items: center; /* Centers content vertically */
-    padding: 2.5%; /* Provides padding around the content */
+    padding: 0 2.5%; /* Keeps side breathing room without shifting vertical centering */
     border: 2px solid black; /* For visualization */
     background-color: #eb5bf8; /* Background color */
     border-radius: 0.9em; /* Rounded corners for aesthetics */
@@ -167,8 +174,13 @@ body{
 }
 
 #hireMe h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
     text-align: center; /* Ensures text is centered within the h2 itself */
     font-size: 4em; /* Large font size for visibility */
+    line-height: 1.05;
     font-family: "Noto Sans", sans-serif; /* Specific font family */
     text-transform: uppercase; /* Uppercase styling for text */
     font-weight: 400; /* Normal font weight */
@@ -179,6 +191,7 @@ body{
 #hireMe a {
     text-decoration: underline; /* Underlines the link for emphasis */
     color: black; /* Sets text color */
+    margin-right: 0.22em;
 }
 
 
@@ -1334,7 +1347,7 @@ body{
     
     #homeText3{
         margin-right: auto;
-        width: 28.5vw;
+        width: fit-content;
     }
     
     #homeText4{
@@ -1356,9 +1369,9 @@ body{
     }
     
     #nam{
-        margin-left: 1%;
+        margin-left: 0;
         margin-top: 0;
-        width: 28.5vw ;
+        width: auto;
     }
     
     #mar{
@@ -1377,5 +1390,412 @@ body{
 
 }
 
+/* Responsive cleanup */
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
 
+body {
+    width: 100%;
+    min-width: 0;
+    overflow-x: hidden;
+}
 
+img,
+video,
+iframe {
+    max-width: 100%;
+}
+
+button {
+    font: inherit;
+}
+
+#homePage,
+#projectsPage,
+#footer,
+#footerMobile {
+    width: min(95vw, 1600px);
+}
+
+#homePage {
+    gap: 0.25rem;
+}
+
+#firstRow,
+#secondRow,
+#thirdRow,
+#fourthRow {
+    gap: 0.25rem;
+}
+
+#firstRow div,
+#secondRow div,
+#thirdRow div,
+#fourthRow div,
+.project,
+#footer,
+#footerMobile {
+    box-shadow: 0 0.25rem 0.65rem rgba(0, 0, 0, 0.28);
+}
+
+#homePage h1 {
+    font-size: clamp(7rem, 13vw, 16.5rem);
+    letter-spacing: 0;
+}
+
+#homeText1,
+#homeText2,
+#homeText3,
+#homeText4,
+#fa,
+#rah,
+#nam,
+#mar {
+    min-width: 0;
+}
+
+#hireMe {
+    min-height: clamp(8rem, 16vw, 16rem);
+    height: auto;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#hireMe h2 {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: clamp(2rem, 4vw, 5rem);
+    height: 100%;
+    line-height: 1.05;
+}
+
+.links {
+    font-size: clamp(1.15rem, 2vw, 2.3rem);
+    line-height: 1.2;
+}
+
+#popUpText1,
+#popUpText2 {
+    max-width: min(90vw, 48rem);
+    max-height: 86vh;
+    padding: clamp(1.5rem, 4vw, 4rem);
+}
+
+#popUpText1 p,
+#popUpText2 ul {
+    padding: 0;
+}
+
+#popUpText1 {
+    font-size: clamp(1rem, 2vw, 2rem);
+}
+
+#popUpText2 {
+    font-size: clamp(1.6rem, 4vw, 3rem);
+}
+
+.close {
+    position: sticky;
+    top: 1rem;
+    float: right;
+    width: clamp(2.5rem, 7vw, 5rem);
+    margin-left: 1rem;
+}
+
+.projects-header {
+    align-items: center;
+    gap: 1rem;
+    padding: clamp(0.75rem, 1.5vw, 1.25rem);
+}
+
+.projectTitle {
+    min-width: 0;
+    padding: 0;
+}
+
+.projectTitle h1,
+.projectTitle h3,
+.projectTitle h4 {
+    width: 100%;
+    padding-left: 0;
+}
+
+.projectTitle h1 {
+    font-size: clamp(1.35rem, 2.2vw, 2rem);
+    line-height: 1.05;
+}
+
+.projectTitle h3,
+.projectTitle h4 {
+    font-size: clamp(1rem, 1.7vw, 2rem);
+    line-height: 1.2;
+}
+
+.plusImg {
+    flex: 0 0 auto;
+    width: clamp(2.75rem, 6vw, 5rem);
+    margin-right: 0;
+}
+
+.projectShow {
+    width: 100%;
+}
+
+.projectShow img,
+.projectShow video {
+    display: block;
+    height: auto;
+}
+
+#pantsText,
+#networkText,
+#shufaText,
+#zineText,
+#visualText,
+#whiteHouseText,
+#talatKhotutText {
+    max-height: none;
+    height: auto;
+    padding-bottom: clamp(1rem, 3vw, 3rem);
+}
+
+#pantsText p,
+#networkText p,
+#shufaText p,
+#zineText p,
+#visualText p,
+#whiteHouseText p,
+#talatKhotutText p {
+    font-size: clamp(1rem, 1.55vw, 1.65rem);
+    line-height: 1.55;
+}
+
+#visual {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#visual1,
+#visual2,
+#doco1,
+#doco2,
+#doco3,
+#doco4,
+#analog2,
+#analog4,
+#pants2,
+#pants3,
+#pants4,
+#pants5,
+#ai-generated2,
+#ai-generated4 {
+    gap: clamp(0.5rem, 1vw, 1rem);
+}
+
+#doco3 .right-column,
+#doco4 .left-column {
+    gap: clamp(0.5rem, 1vw, 1rem);
+}
+
+#doco3 .right-column img {
+    width: 100%;
+}
+
+#doco4 .right-column img {
+    height: auto;
+}
+
+#menuToggle,
+#closeMenu {
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+#menuToggle {
+    width: 3rem;
+    height: 3rem;
+    padding: 0.55rem;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.35rem;
+}
+
+#menuToggle span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: black;
+}
+
+#closeMenu {
+    background: white;
+    border-radius: 0.35rem;
+    padding: 0.25rem;
+}
+
+@media (max-width: 900px) {
+    #homePage {
+        display: none;
+    }
+
+    #homePageMobile {
+        display: flex;
+        width: min(92vw, 42rem);
+    }
+
+    #homePageMobile h1 {
+        font-size: clamp(4.5rem, 22vw, 8rem);
+    }
+
+    #secondRowM {
+        margin-top: 5rem;
+    }
+
+    #menu {
+        display: block;
+    }
+
+    #menuToggle {
+        display: flex;
+    }
+
+    #aboutPageMobile {
+        display: block;
+        width: min(90vw, 42rem);
+    }
+
+    #mobileNavLinks p {
+        font-size: clamp(2rem, 10vw, 4rem);
+    }
+
+    #projectsPage {
+        width: min(94vw, 48rem);
+        margin-top: 2rem;
+    }
+
+    .project {
+        border-radius: 0.75rem;
+    }
+
+    .projects-header {
+        align-items: flex-start;
+    }
+
+    .projectTitle h1 {
+        font-size: clamp(1.15rem, 5vw, 1.7rem);
+    }
+
+    .projectTitle h3,
+    .projectTitle h4 {
+        font-size: clamp(0.9rem, 4vw, 1.2rem);
+    }
+
+    #pantsText p,
+    #networkText p,
+    #shufaText p,
+    #zineText p,
+    #visualText p,
+    #whiteHouseText p,
+    #talatKhotutText p {
+        column-count: 1;
+    }
+
+    .new-column {
+        break-before: auto;
+        margin-top: 1rem;
+    }
+
+    #pants2,
+    #pants3,
+    #pants4,
+    #pants5,
+    #ai-generated2,
+    #ai-generated4,
+    #visual1,
+    #visual2,
+    #doco1,
+    #doco2,
+    #doco3,
+    #doco4,
+    #analog2,
+    #analog4 {
+        flex-direction: column;
+    }
+
+    #pants2 img,
+    #pants3 img,
+    #pants4 img,
+    #pants5 img,
+    #ai-generated2 img,
+    #ai-generated4 img,
+    #doco1 img:nth-child(1),
+    #doco1 img:nth-child(2),
+    #doco2 img:nth-child(1),
+    #doco2 img:nth-child(2),
+    #analog2 > img:first-child,
+    #analog2 > img:last-child,
+    #analog4 > img:first-child,
+    #analog4 > img:last-child,
+    #doco3 .left-column,
+    #doco3 .right-column,
+    #doco4 .left-column,
+    #doco4 .right-column {
+        width: 100%;
+    }
+
+    #visual1 .left-column img,
+    #visual1 .middle-column img,
+    #visual1 .right-column img,
+    #visual2 .left-column img,
+    #visual2 .middle-column img,
+    #visual2 .right-column img {
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+
+    #footer {
+        width: min(94vw, 48rem);
+    }
+
+    #footerMobile {
+        display: block;
+        width: min(94vw, 48rem);
+    }
+}
+
+@media (max-width: 430px) {
+    #homePageMobile h1 {
+        font-size: clamp(3.7rem, 24vw, 5.5rem);
+    }
+
+    #hireMeM h2 {
+        font-size: 0.8rem;
+    }
+
+    #aboutPageMobile p {
+        font-size: 1rem;
+    }
+
+    .plusImg {
+        width: 2.5rem;
+    }
+
+    #footerMobile a {
+        font-size: 1.35rem;
+    }
+}
+
+@media (min-width: 901px) {
+    #homePage {
+        justify-content: center;
+        min-height: 100svh;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: clamp(0.75rem, 2vh, 1.5rem) 0;
+    }
+}
